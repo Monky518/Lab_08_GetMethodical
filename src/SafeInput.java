@@ -228,4 +228,50 @@ public class SafeInput
 
         return response;
     }
+
+    /**
+     * creates a pretty header that is centered with a custom message
+     * @param msg custom message for the header
+     */
+    public static void prettyHeader(String msg)
+    {
+        for (int i = 0; i < 60; i++)
+        {
+            System.out.print("*");
+        }
+
+        System.out.print("\n");
+
+        int totalSpace = 54 - msg.length();
+        int halfSpace = totalSpace / 2;
+        for (int i = 0; i < 3; i++)
+        {
+            System.out.print("*");
+        }
+        for (int i = 0; i < halfSpace; i++)
+        {
+            System.out.print(" ");
+        }
+        System.out.print(msg);
+        for (int i = 0; i < halfSpace; i++)
+        {
+            System.out.print(" ");
+        }
+        if ((msg.length() % 2) == 1)
+        {
+            // odd, add a place at the end
+            System.out.print(" ");
+        }
+        for (int i = 0; i < 3; i++)
+        {
+            System.out.print("*");
+        }
+
+        System.out.print("\n");
+
+        for (int i = 0; i < 60; i++)
+        {
+            System.out.print("*");
+        }
+    }
 }

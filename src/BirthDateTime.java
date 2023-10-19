@@ -24,8 +24,6 @@ public class BirthDateTime
 
         year = SafeInput.getRangedInt(scan, "Enter your birth year", 1950, 2015);
         month = SafeInput.getRangedInt(scan, "Enter your birth month", 1, 12);
-        // 4 6 9 11 : 30
-        // 1 3 5 7 8 10 12 : 31
         switch (month)
         {
             case 2:
@@ -47,6 +45,8 @@ public class BirthDateTime
                 day = SafeInput.getRangedInt(scan, "Enter your birth day", 1, 31);
                 break;
         }
-
+        hour = SafeInput.getRangedInt(scan, "Enter your birth hour", 1, 24);
+        min = SafeInput.getRangedInt(scan, "Enter your birth minute", 0, 59);
+        System.out.println("You were born on month " + month + ", day " + day + ", year " + year + " at the " + hour + " hour and " + min + " minute");
     }
 }

@@ -13,8 +13,6 @@ public class FavNumbers
         double favDouble = 0.0;
         Scanner scan = new Scanner(System.in);
 
-        // if (n % 2) == 1, then odd
-
         favInt = SafeInput.getInt(scan, "Enter your favorite int number");
         favDouble = SafeInput.getDouble(scan, "Enter your favorite double number");
 
